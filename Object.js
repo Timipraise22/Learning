@@ -7,7 +7,7 @@ var CEO= {
 }
 
 console.log(CEO)
-console.log(CEO.Age) // to print out a single object888888888888888888888888888
+console.log(CEO.Age) // to print out a single object
 console.table(CEO) //to print out in table
 
  //ways to get info using a template
