@@ -4,11 +4,11 @@ class Student{
         this.grade = grade;
     }
 
-    hasPassed(){
-        var passed = this.grade >= 100;
-        // console.log(`${this.name} has ${passed ? 'passed': 'failed'}`);
+    hasFailed(){
+        // var passed = this.grade >= 70;
+        // console.log(`${this.name} has ${passed ? 'passed': 'failed'}`); //Tenary Operator 
 
-        if(passed >= 70){
+        if(this.grade >= 70){
             console.log(`${this.name} has passed`)
         }
 
@@ -17,7 +17,7 @@ class Student{
         }
     }
     getResult(){
-        this.hasPassed();
+        this.hasFailed();
     }
 }
 
