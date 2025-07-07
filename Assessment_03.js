@@ -9,7 +9,7 @@ class Employee{
 
     isEligibleForPromotion(){
         if(this.performance_score >= 70){
-            console.log(`${this.name} (${this.department}) earns ${this.salary} naira - Eligible for Promotion`)
+            return (`${this.name} (${this.department}) earns ${this.salary} naira - Eligible for Promotion`)
         }
         else if(this.performance_score >= 60 && this.performance_score <=69){
             console.log(`${this.name} (${this.department}) earns ${this.salary} naira - Promotion is being reviewed`)
@@ -30,6 +30,10 @@ class Employee{
 
         var totalSalary = employeesArray.reduce((sum, emp) => sum + emp.salary, 0);
         return totalSalary / employeesArray.length;
+    }
+
+    getFormattedSalary(){
+        return this.salary.toLocaleString(`en-NG`,{style: `currency`, currency:`NGN`})
     }
 
 }
