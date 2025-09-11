@@ -5,24 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Dashboard</title>
     <link rel="stylesheet" href="Stylesheets.css">
+    <script src="main.js"></script>
 </head> 
 <body>
-    <div class="Section">
-        <label for="departmentfilter">Departments</label>
-        <select id="departmentfilter">
-            <option value="00">All</option> 
-            <option value="01">Purchase</option>
-            <option value="02">Engineering</option>
-            <option value="03">Sales</option>
-            <option value="04">IT</option>
-            <option value="05">Audit</option>
-        </select>
+    <div class="container">
+        <div class="header">
+            <h1>Employees card</h1>
+        </div>
 
+        <div class="selections">
+            <div class="section">
+                <label for="departmentfilter"><span>Departments</span></label>
+                <select id="departmentfilter">
+                    <option value="all">All Departments</option> 
+                    <option value="Purchase">Purchase</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Sales">Sales</option>
+                    <option value="IT">IT</option>
+                    <option value="Audit">Audit</option>
+                </select> 
+            </div>
+        </div>
+
+        <div id="employeeGrid" class="employee-grid">
+            <!-- Employee cards will be populated here -->
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <h3>No employees found</h3>
+            <p>Try selecting a different department filter</p>
+        </div>
     </div>
-
-    <div class="dashbord" id="dashbord"></div>
-
-
+          
+    
     <script src="main.js"></script>
 </body>
 </html>
