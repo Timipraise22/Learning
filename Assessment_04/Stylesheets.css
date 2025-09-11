@@ -1,112 +1,137 @@
-.Container{
-    max-width: 1200px;
-    margin: auto; 
-    background: rgb(255, 254, 254);
-    border: 10px solid #ddd;
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 0 10px ;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Times New Roman', Times, serif;
+    background: beige;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
     text-align: center;
-    padding: 2rem; 
-    border: 0; 
-    background: #f8f9f6;
+    margin-bottom: 30px;
 }
 
-h1{
-    text-align: center;
-    margin-bottom: 1rem;
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(12, 34, 230, 0.3);
 }
 
-select{
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 1px solid #ccc ;
-    border-radius: 5px;
+.selections {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-label{
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 1px solid #ccc ;
-    border-radius: 5px;
+.section {
+    background: rgba(92, 65, 190, 0.1);
+    padding: 15px 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-span{
-    font-size: 1.5rem;
-}
-
-.Section{
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.employeeList{
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-button{
-    display: block;
-    margin: 1rem auto;
-    padding: 0.6rem 1.2rem;
-    background-color: #007bff;
+.section label {
     color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: #0056B3;
-}
-
-.dashboard{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minimax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.card{
-    background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
-}
-
-.card:hover{
-    transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.name{
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.badge{
+    font-weight: 600;
+    margin-right: 10px;
     display: inline-block;
-    padding: 0.3rem 0.6rem;
-    border-radius: 6px;
+    border-radius: 20px;
+}
+
+.section select {
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+#departmentFilter {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#departmentFilter:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.employee-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.employee-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2410d4;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.employee-name::before {
+    content: '👤';
+    font-size: 1.2rem;
+}
+
+.employee-card:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
     color: white;
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
+    transform: translateY(-8px); 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-.green{
-    background-attachment: green;
+.performance-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    gap: 5px;
 }
 
-.red{
-    background-color: crimson;
+.badge-excellent {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
 }
 
-.yellow{
-    background-color: goldenrod;
+.badge-good {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+}
+
+.badge-needs-improvement {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
 }
